@@ -1,0 +1,6 @@
+<div>
+    <p [ngClass]="{'text-left': isCurrentUser === false, 'text-right': isCurrentUser !== false}" class="pb-3">{{ senderName() }}</p>
+    <div class="p-3 bg-slate-700 rounded-lg text-left">
+        <p>{{ messageText }}</p>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div 
+  class="flex items-center p-4 py-10 border-b border-gray-200 hover:cursor-pointer"
+  (click)="onSelectChannel()"
+  [ngStyle]="{ opacity: isSelected ? 1 : 0.5 }"  
+  [class.transition-opacity]="true">
+  <!-- Channel Image with Link -->
+  <a [href]="'/channel/' + name" class="mr-4">
+    <img
+      [src]="img"
+      alt="{{ name }}"
+      class="w-12 h-12 rounded-full"
+    />
+  </a>
+
+  <!-- Channel Details -->
+  <div>
+    <h3 class="text-lg font-semibold text-white">{{ name }}</h3>
+    <p class="text-sm text-gray-400">{{ description }}</p>
+  </div>
+</div>

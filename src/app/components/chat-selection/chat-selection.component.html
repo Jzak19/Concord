@@ -1,0 +1,13 @@
+
+<h2 class="text-white font-bold text-lg">Text Channels</h2>
+
+<div class="py-8">
+    <app-chat-list-item
+    *ngFor="let channel of channels"
+    [name]="channel.name"
+    [description]="channel.description"
+    [img]="channel.img"
+    ></app-chat-list-item>
+</div>
+
+

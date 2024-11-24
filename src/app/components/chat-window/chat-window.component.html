@@ -1,0 +1,32 @@
+
+
+<body>
+  <div #scrollableView class="flex flex-col space-y-4 max-w-full">
+    <!-- Message loop -->
+    @for (message of messagesList; track $index) {
+      <div
+        [ngClass]="{
+          'self-end': userUID === message[2],
+          'self-start': userUID !== message[2]
+        }"
+        class="max-w-[50%] px-4 break-words"
+      >
+        <div
+          class=" rounded-lg p-3"
+          [ngClass]="{
+            'text-right ': userUID === message[2],
+            'text-left ': userUID !== message[2]
+          }"
+        >
+          <app-displayed-message
+            [senderName]="message[1]"
+            [messageText]="message[0]"
+            [isCurrentUser]="userUID === message[2]"
+            (example)="$event"
+          />
+        </div>
+      </div>
+    }
+  </div>
+  <div #scrollAnchor></div>
+</body>

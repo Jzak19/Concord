@@ -1,0 +1,17 @@
+<div class="flex items-center p-2 py-6 border-b border-gray-200">
+    <!-- Channel Image -->
+    <img
+      src="{{ img }}"
+      (error)="onImageError($event)"  
+      class="w-8 h-8 rounded-full mr-4"
+
+    />
+  
+    <!-- Channel Details -->
+    <div>
+      <h3 class="text-sm font-semibold text-white">{{ username }}</h3>
+      <p [ngClass]="status ? 'text-green-300' : 'text-red-300'" class="text-xs">
+        {{ status ? 'Online' : 'Offline' }}
+      </p>
+    </div>
+  </div>

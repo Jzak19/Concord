@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "messagingApp": {
+    "messagingapp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "messagingApp:build:production"
+              "buildTarget": "messagingapp:build:production"
             },
             "development": {
-              "buildTarget": "messagingApp:build:development"
+              "buildTarget": "messagingapp:build:development"
             }
           },
           "defaultConfiguration": "development"
